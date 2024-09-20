@@ -39,7 +39,7 @@ CREATE TABLE Kitap
 	Isim NVARCHAR(100) NOT NULL,
 	Tur_ID int NOT NULL,
 	Yayinevi_ID int NOT NULL,
-	Sayfa_Sayisi tinyint NOT NULL,
+	Sayfa_Sayisi smallint NOT NULL,
 	Kitap_Dili NVARCHAR(50) NOT NULL,
 	CONSTRAINT pk_Kitap PRIMARY KEY(ID),
 	CONSTRAINT fk_KitapTurID FOREIGN KEY(Tur_ID) REFERENCES Tur(TurID),
@@ -63,7 +63,7 @@ CREATE TABLE Uyeler
 	UyelerID int IDENTITY (1,1),
 	Isim NVARCHAR(100) NOT NULL,
 	Soyisim NVARCHAR(100) NOT NULL,
-	Telefon tinyint NOT NULL,
+	Telefon bigint NOT NULL,
 	Cinsiyet NVARCHAR(20) NOT NULL,
 	CONSTRAINT pk_Uyeler PRIMARY KEY(UyelerID)
 )
